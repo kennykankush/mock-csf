@@ -38,7 +38,7 @@ FROM openjdk:23
 
 WORKDIR /app
 
-COPY --from=javabuild /server/target/server-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=javabuild /server/target/*.jar app.jar
 
 ENV PORT=8080
 
