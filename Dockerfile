@@ -23,10 +23,10 @@ FROM openjdk:23 AS javabuild
 
 WORKDIR /server
 
-COPY ecommerce/server/pom.xml .
-COPY ecommerce/server/.mvn .mvn
-COPY ecommerce/server/mvnw .
-COPY ecommerce/server/src src
+COPY ecommerce/pom.xml .
+COPY ecommerce/.mvn .mvn
+COPY ecommerce/mvnw .
+COPY ecommerce/src src
 
 COPY --from=ngbuild /client/dist/client/browser src/main/resources/static
 
