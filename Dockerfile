@@ -28,7 +28,7 @@ COPY ecommerce/.mvn .mvn
 COPY ecommerce/mvnw .
 COPY ecommerce/src src
 
-COPY --from=ngbuild /client/dist/client/browser src/main/resources/static
+COPY --from=ngbuild /client/dist/client-side/browser src/main/resources/static
 
 RUN chmod a+x mvnw
 RUN ./mvnw package -Dmaven.test.skip=true
