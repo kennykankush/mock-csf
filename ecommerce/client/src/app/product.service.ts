@@ -13,6 +13,7 @@ export class ProductService {
   // If this method is changed, any assessment task relying on this method will
   // not be marked
   getProductCategories(): Observable<string[]> {
+    console.log('Product Category Iniatiated');
     return this.http.get<string[]>('/api/categories')
   }
 
